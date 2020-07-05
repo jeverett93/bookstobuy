@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const mongoose = require("mongoose");
+const routes = require("./routes");
 const app = express();
 require("dotenv").config();
 
@@ -14,8 +15,8 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// requiring routes
-
+// Add routes, both API and view
+app.use(routes);
 
 // Send every other request to the React app
 // Define any API routes before this runs
@@ -24,10 +25,7 @@ app.get("*", (req, res) => {
 });
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/bookstobuy", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}).then(console.log('Database is connected'))
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/bookstobuy").then(console.log('Database is connected'))
   .catch(err => console.log(err));
 
 app.listen(PORT, () => {

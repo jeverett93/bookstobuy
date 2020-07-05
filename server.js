@@ -14,12 +14,8 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// using passport for authentication
-app.use(passport.initialize());
-require('./config/passport')(passport);
+// requiring routes
 
-// api routes for passport
-require('./routes/userRoutes')(app);
 
 // Send every other request to the React app
 // Define any API routes before this runs

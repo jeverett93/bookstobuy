@@ -24,7 +24,7 @@ app.get("*", (req, res) => {
 });
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/bookstobuy").then(console.log('Database is connected'))
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/bookstobuy").then(console.log("Database is connected"))
   .catch(err => console.log(err));
 
 app.listen(PORT, () => {

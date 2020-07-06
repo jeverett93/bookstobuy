@@ -6,7 +6,7 @@ function Jumbotron() {
             <h1 className="display-4">Google Books Search</h1>
             <p className="lead">Search for and Save Books of Interest.</p>
         </div>
-    )
+    );
 }
 
-export default Jumbotron
+export default Jumbotron;

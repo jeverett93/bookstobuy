@@ -1,12 +1,12 @@
-import React from "react"
-import Savedform from "../components/Savedform"
+import React from "react";
+import Savedform from "../components/Savedform";
 
 function Saved() {
     return (
-        <> 
-        <Savedform/>
+        <>
+            <Savedform />
         </>
-    )
+    );
 }
 
-export default Saved
+export default Saved;

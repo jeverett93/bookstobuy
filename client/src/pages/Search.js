@@ -29,8 +29,18 @@ function Search() {
                 searchTerm = {searchTerm}
                 onClick = {searchBooks}
             />
-            {/* map function */}
-            <Resultform />
+            
+            {books.map((book, index) => (
+                <Resultform 
+                key={index}
+                title={book.volumeInfo.title}
+                authors={book.volumeInfo.authors}
+                description={book.volumeInfo.description}
+                image={book.volumeInfo.imageLinks.thumbnail}
+                link={book.volumeInfo.infoLink}
+                />
+            ))}
+            
         </>
     );
 }

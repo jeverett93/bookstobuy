@@ -29,7 +29,7 @@ function Search() {
                 searchTerm = {searchTerm}
                 onClick = {searchBooks}
             />
-            
+
             {books.map((book, index) => (
                 <Resultform 
                 key={index}

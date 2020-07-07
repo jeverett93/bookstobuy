@@ -1,20 +1,29 @@
 import React from "react";
 
 function Resultform(props) {
+    console.log(props)
     return (
-        <form className="form-control">
+        <div>
             <h3>Results</h3>
-            <div className="card" style={{ width: "18rem" }}>
-                <div className="card-body">
-    <h5 className="card-title">Book Title: {props.title}</h5>
-    <p className="card-text">Authors: {props.authors}</p>
-                    <img image={props.image}/>
-                    <p className="card-text">Book Synopsis: {props.authors}</p>
-                    <button href={props.link}>View</button>
-                    <button>Saved</button>
+        <div className="card" style={{ width: "18rem" }}>
+            <div className="card-body">
+                <h5 className="card-title">Book Title: {props.title}</h5>
+                <p className="card-text">Authors: {props.authors}</p>
+                <img alt="book-cover" src={props.image} />
+                <p className="card-text">Book Synopsis: {props.description}</p>
+                <div className="btn-container" role="button">
+                    <a className="btn btn-light" target="_blank" rel="noopener noreferrer" href={props.link}>
+                        View
+                    </a>
                 </div>
+                {/* <div className="btn-container" role="button">
+                    <a className="btn btn-light" target="_blank" rel="noopener noreferrer" href={link}>
+                        Saved
+                    </a>
+                </div> */}
             </div>
-        </form>
+        </div>
+    </div>
     );
 }
 

@@ -4,7 +4,7 @@ const styles = {
     backgroundColor: "white",
     color: "#007bff",
     fontStyle: "italic"
-}
+};
 
 function Jumbotron() {
     return (

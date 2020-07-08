@@ -9,7 +9,7 @@ const styles = {
         marginBottom: "50px",
         color: "#007bff"
     }
-}
+};
 
 function Saved() {
     const [books, setBooks] = useState([]);

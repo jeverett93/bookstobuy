@@ -6,7 +6,7 @@ const styles = {
         border: "solid 0.5px #007bff",
         marginBottom: "10px"
     }
-}
+};
 
 function Textbox(props) {
     return (
@@ -19,7 +19,12 @@ function Textbox(props) {
                     style={styles.input}
                     placeholder="Enter Book Title"
                 />
-                <button className="btn-primary btn-container btn" onClick={props.onClick} style={{borderRadius: "5px"}}>Search</button>
+                <button
+                    className="btn-primary btn-container btn"
+                    onClick={props.onClick}
+                    style={{ borderRadius: "5px" }}>
+                    Search
+                </button>
             </div>
         </div>
     );

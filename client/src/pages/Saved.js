@@ -10,7 +10,7 @@ function Saved() {
     }, [])
 
     // Loads all books and sets them to books
-    function loadBooks() {
+    const loadBooks = () => {
         API.getBooks()
             .then(res =>{
                 console.log(res.data)
@@ -20,7 +20,7 @@ function Saved() {
     };
 
     // Deletes a book from the database with a given id, then reloads books from the db
-    function deleteBook(id) {
+    const deleteBook = (id) => {
         API.deleteBook(id)
             .then(res => loadBooks())
             .catch(err => console.log(err));
@@ -37,7 +37,7 @@ function Saved() {
                 image={book.image}
                 link={book.link}
                 delete={() => {
-                    deleteBook(book);
+                    deleteBook(book._id);
                 }}
             />
             ))}

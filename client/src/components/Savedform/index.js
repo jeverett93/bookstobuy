@@ -4,6 +4,9 @@ const styles = {
     media: {
         marginBottom: "50px",
         border: "solid 1px #007bff"
+    },
+    mediaBody: {
+        margin: "10px"
     }
 };
 

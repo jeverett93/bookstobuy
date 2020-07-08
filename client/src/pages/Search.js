@@ -35,14 +35,14 @@ function Search() {
     };
 
     return (
-        <>
+        <div className="container">
             <Textbox
                 handleInputChange={handleInputChange}
                 name="title"
                 searchTerm={searchTerm}
                 onClick={searchBooks}
             />
-
+                <form>
             {books.map((book, index) => (
                 <Resultform
                     key={index}
@@ -56,7 +56,8 @@ function Search() {
                     }}
                 />
             ))}
-        </>
+            </form>
+        </div>
     );
 }
 

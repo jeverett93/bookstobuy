@@ -2,6 +2,15 @@ import React, { useState, useEffect } from "react";
 import Savedform from "../components/Savedform";
 import API from "../utils/API";
 
+const styles = {
+    h2: {
+        textAlign: "center",
+        marginTop: "20px",
+        marginBottom: "50px",
+        color: "#007bff"
+    }
+}
+
 function Saved() {
     const [books, setBooks] = useState([]);
     // Load all books and store them with setBooks
@@ -26,7 +35,8 @@ function Saved() {
             .catch(err => console.log(err));
     };
     return (
-        <>
+        <div className="container">
+            <h2 style={styles.h2}>Saved Books</h2>
             {books.map((book, index) => (
                 <Savedform
                     key={index}
@@ -41,7 +51,7 @@ function Saved() {
                     }}
                 />
             ))}
-        </>
+        </div>
     );
 }
 

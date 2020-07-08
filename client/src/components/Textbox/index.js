@@ -1,17 +1,25 @@
 import React from "react";
 
+const styles = {
+    border: "none",
+    input: {
+        border: "solid 0.5px #007bff",
+        marginBottom: "10px"
+    }
+}
+
 function Textbox(props) {
     return (
-        <div className="card" style={{ width: "18rem" }}>
+        <div className="card" style={styles}>
             <div className="card-body">
-                <h5 className="card-title">Book Search</h5>
-                <p className="card-text">Book Title</p>
                 <input
                     className="form-control"
                     onChange={props.handleInputChange}
                     value={props.search}
+                    style={styles.input}
+                    placeholder="Enter Book Title"
                 />
-                <button onClick={props.onClick}>Search</button>
+                <button className="btn-primary btn-container btn" onClick={props.onClick} style={{borderRadius: "5px"}}>Search</button>
             </div>
         </div>
     );

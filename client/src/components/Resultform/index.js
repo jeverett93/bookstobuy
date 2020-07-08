@@ -1,24 +1,32 @@
 import React from "react";
 
+const styles = {
+    media: {
+        marginBottom: "50px",
+        border: "solid 1px #007bff"
+    },
+    mediaBody: {
+        margin: "10px"
+    },
+    p: {
+        fontWeight: "bolder"
+    }
+}
+
 function Resultform(props) {
     return (
         <div>
-            <h3>Results</h3>
-            <div className="card" style={{ width: "18rem" }}>
-                <div className="card-body">
-                    <h5 className="card-title">Book Title: {props.title}</h5>
+            <div className="media" style={styles.media}>
+            <img alt="book-cover" className="mr-3" src={props.image} style={styles.mediaBody}/>
+                <div className="media-body" style={styles.mediaBody}>
+                    <h5 className="mt-0">{props.title}</h5>
                     <p className="card-text">Authors: {props.authors}</p>
-                    <img alt="book-cover" src={props.image} />
-                    <p className="card-text">Book Synopsis: {props.description}</p>
-                    <div className="btn-container" role="button">
-                        <a
-                            className="btn btn-primary"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href={props.link}>
+                    <p className="card-text">Synopsis: {props.description}</p>
+                    <a target="_blank" rel="noopener noreferrer" href={props.link} style={styles.mediaBody}>
+                        <div className="btn-container btn btn-primary" role="button">
                             View
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                     <div
                         className="btn-container btn btn-primary"
                         role="button"

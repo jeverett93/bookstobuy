@@ -4,18 +4,20 @@ import Resultform from "../components/Resultform";
 import API from "../utils/API";
 
 function Search() {
-    const [books, setBooks] = useState([])
-    const [searchTerm, setSearch] = useState("")
+    const [books, setBooks] = useState([]);
+    const [searchTerm, setSearch] = useState("");
 
     const searchBooks = () => {
-        API.search(searchTerm).then(res => {
-            setBooks(res.data)
-        }).catch(err => {
-            console.log(err)
-        })
-    }
+        API.search(searchTerm)
+            .then(res => {
+                setBooks(res.data);
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    };
 
-    const saveBook = (bookData) => {
+    const saveBook = bookData => {
         API.saveBook({
             title: bookData.volumeInfo.title,
             authors: bookData.volumeInfo.authors,
@@ -23,14 +25,14 @@ function Search() {
             image: bookData.volumeInfo.imageLinks.thumbnail,
             link: bookData.volumeInfo.infoLink
         })
-            .then(res => console.log('saved'))
+            .then(res => console.log("saved"))
             .catch(err => console.log(err));
-    }
+    };
 
-    const handleInputChange = (event) => {
-        const { value } = event.target
-        setSearch(value)
-    }
+    const handleInputChange = event => {
+        const { value } = event.target;
+        setSearch(value);
+    };
 
     return (
         <>
@@ -54,10 +56,8 @@ function Search() {
                     }}
                 />
             ))}
-
         </>
     );
 }
-
 
 export default Search;

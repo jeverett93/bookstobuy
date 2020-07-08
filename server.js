@@ -28,7 +28,7 @@ mongoose
     .connect(process.env.MONGODB_URI || "mongodb://localhost/bookstobuy")
     .then(console.log("Database is connected"))
     .catch(err => console.log(err));
-console.log("This the port: ", PORT)
+console.log("This the port: ", PORT);
 app.listen(PORT, () => {
     console.log(`🌎 ==> API server now on port ${PORT}!`);
 });

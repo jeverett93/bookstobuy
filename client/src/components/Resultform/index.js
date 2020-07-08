@@ -1,7 +1,6 @@
 import React from "react";
 
 function Resultform(props) {
-    console.log(props)
     return (
         <div>
             <h3>Results</h3>
@@ -12,15 +11,12 @@ function Resultform(props) {
                 <img alt="book-cover" src={props.image} />
                 <p className="card-text">Book Synopsis: {props.description}</p>
                 <div className="btn-container" role="button">
-                    <a className="btn btn-light" target="_blank" rel="noopener noreferrer" href={props.link}>
+                    <a className="btn btn-primary" target="_blank" rel="noopener noreferrer" href={props.link}>
                         View
                     </a>
                 </div>
-                {/* <div className="btn-container" role="button">
-                    <a className="btn btn-light" target="_blank" rel="noopener noreferrer" href={link}>
-                        Saved
-                    </a>
-                </div> */}
+                <div className="btn-container btn btn-primary" role="button" onClick={props.save}>Save
+                </div>
             </div>
         </div>
     </div>

@@ -11,6 +11,7 @@ function Search() {
         API.search(searchTerm)
             .then(res => {
                 setBooks(res.data);
+                console.log("data: ", res.data);
             })
             .catch(err => {
                 console.log(err);
@@ -20,9 +21,13 @@ function Search() {
     const saveBook = bookData => {
         API.saveBook({
             title: bookData.volumeInfo.title,
-            authors: bookData.volumeInfo.authors,
-            description: bookData.volumeInfo.description,
-            image: bookData.volumeInfo.imageLinks.thumbnail,
+            authors: bookData.volumeInfo.authors ? bookData.volumeInfo.authors : "No authors found",
+            description: bookData.volumeInfo.description
+                ? bookData.volumeInfo.description
+                : "No synopsis found",
+            image: bookData.volumeInfo.imageLinks
+                ? bookData.volumeInfo.imageLinks.thumbnail
+                : "https://via.placeholder.com/150.png?text=No+Image+Found",
             link: bookData.volumeInfo.infoLink
         })
             .then(res => console.log("saved"))
@@ -47,9 +52,19 @@ function Search() {
                     <Resultform
                         key={index}
                         title={book.volumeInfo.title}
-                        authors={book.volumeInfo.authors}
-                        description={book.volumeInfo.description}
-                        image={book.volumeInfo.imageLinks.thumbnail}
+                        authors={
+                            book.volumeInfo.authors ? book.volumeInfo.authors : "No authors found"
+                        }
+                        description={
+                            book.volumeInfo.description
+                                ? book.volumeInfo.description
+                                : "No synopsis found"
+                        }
+                        image={
+                            book.volumeInfo.imageLinks
+                                ? book.volumeInfo.imageLinks.thumbnail
+                                : "https://via.placeholder.com/150.png?text=No+Image+Found"
+                        }
                         link={book.volumeInfo.infoLink}
                         save={() => {
                             saveBook(book);

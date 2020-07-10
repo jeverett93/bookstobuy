@@ -1,68 +1,60 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![License](https://img.shields.io/badge/License-MIT-blueviolet)
 
-## Available Scripts
+![Profile Picture](https://avatars0.githubusercontent.com/u/60204713?v=4)
 
-In the project directory, you can run:
+# Books to Buy
 
-### `npm start`
+## <h2 id="link">Live Link</h2> https://bookstobuy.herokuapp.com/
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## <h2 id="description">Description</h2>
+This an app that allows users to search for and save the books they're interested in buying. They can also view the Google Books link for each book and delete them from their saved lists. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+![Image of Application](client/public/images/appdemo.gif)
 
-### `npm test`
+## Table of Contents
+* <a href="#link">Live Link</a> 
+* <a href="#description">Description</a>
+* <a href="#installation">Installation</a> 
+* <a href="#tech">Technology Stack</a>
+* <a href="#usage">Usage</a>
+* <a href="#contributors">Contributors</a> 
+* <a href="#contact">Contact</a>
+* <a href="#tests">Tests</a>
+    
+## Installation
+* Step 1. Git clone this link to your terminal: https://github.com/jeverett93/bookstobuy.git
+* Step 2. Navigate into the cloned repository.
+* Step 3. Install the required dependencies using the following command:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    ```
+    npm install
+    ```
+* Step 4. Run the application from the command line with following command:
 
-### `npm run build`
+    ```
+    npm start
+    ```
+## <h2 id="tech">Technology Stack</h2>
+Node.Js, JavaScript, GIT, GitHub, HTML, CSS, Bootstrap, React, Axios call to Google Books API, Service Worker, Web Manifest, Mongoose
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## <h2 id="usage">Usage</h2>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```
+As a user, I want to be able to search for books, save them for later viewing. I also want to view more information for about these books and delete them from my saved list.
+```
+    
+## <h2 id="contributors">Contributors</h2>
+[github.com/jeverett93](github.com/jeverett93)
+    
+## <h2 id="contact">Contact</h2>
+* #### Name: Joshua Everett
+* #### Portfolio: [jeverett.github.io](jeverett.github.io)
+* #### Email: josheverett93@gmail.com
+* #### LinkedIn: [https://www.linkedin.com/in/joshua-everett-087a4649/](https://www.linkedin.com/in/joshua-everett-087a4649/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## <h2 id="tests">Tests</h2>
+To test:
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```
+npm run test
+```

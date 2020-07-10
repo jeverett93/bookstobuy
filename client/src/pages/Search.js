@@ -21,7 +21,7 @@ function Search() {
     const saveBook = bookData => {
         API.saveBook({
             title: bookData.volumeInfo.title,
-            authors: bookData.volumeInfo.authors ? bookData.volumeInfo.authors : "No authors found",
+            authors: bookData.volumeInfo.authors ? bookData.volumeInfo.authors.join(', ') : "No authors found",
             description: bookData.volumeInfo.description
                 ? bookData.volumeInfo.description
                 : "No synopsis found",
@@ -53,7 +53,7 @@ function Search() {
                         key={index}
                         title={book.volumeInfo.title}
                         authors={
-                            book.volumeInfo.authors ? book.volumeInfo.authors : "No authors found"
+                            book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : "No authors found"
                         }
                         description={
                             book.volumeInfo.description

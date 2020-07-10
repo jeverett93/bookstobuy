@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Savedform from "../components/Savedform";
 import API from "../utils/API";
 
+// inline styling
 const styles = {
     h2: {
         textAlign: "center",
@@ -11,7 +12,9 @@ const styles = {
     }
 };
 
+// functional component holding state and format for saved books page
 function Saved() {
+    // using hooks to set initial state to empty array
     const [books, setBooks] = useState([]);
     // Load all books and store them with setBooks
     useEffect(() => {
@@ -34,9 +37,11 @@ function Saved() {
             .then(res => loadBooks())
             .catch(err => console.log(err));
     };
+    // rendering saved books from database
     return (
         <div className="container">
             <h2 style={styles.h2}>Saved Books</h2>
+            {/* mapping database for saved items */}
             {books.map((book, index) => (
                 <Savedform
                     key={index}
@@ -55,4 +60,5 @@ function Saved() {
     );
 }
 
+// exporting page to be used in other parts of application
 export default Saved;

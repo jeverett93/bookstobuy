@@ -1,5 +1,6 @@
 import React from "react";
 
+// inline styling
 const styles = {
     media: {
         marginBottom: "50px",
@@ -13,6 +14,7 @@ const styles = {
     }
 };
 
+// component holding results of search
 function Resultform(props) {
     return (
         <div>
@@ -20,8 +22,12 @@ function Resultform(props) {
                 <img alt="book-cover" className="mr-3" src={props.image} style={styles.mediaBody} />
                 <div className="media-body" style={styles.mediaBody}>
                     <h5 className="mt-0">{props.title}</h5>
-                    <p className="card-text"><b>Authors:</b> {props.authors}</p>
-                    <p className="card-text"><b>Synopsis:</b> {props.description}</p>
+                    <p className="card-text">
+                        <b>Authors:</b> {props.authors}
+                    </p>
+                    <p className="card-text">
+                        <b>Synopsis:</b> {props.description}
+                    </p>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
@@ -43,4 +49,5 @@ function Resultform(props) {
     );
 }
 
+// exporting component to be used in other parts of application
 export default Resultform;

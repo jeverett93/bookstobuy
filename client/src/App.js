@@ -5,6 +5,7 @@ import Saved from "./pages/Saved";
 import Navbar from "./components/Navbar";
 import Jumbotron from "./components/Jumbotron";
 
+// rendering main app components with router
 function App() {
     return (
         <Router>
@@ -16,4 +17,5 @@ function App() {
     );
 }
 
+// exporting file to be used in other parts of the application
 export default App;

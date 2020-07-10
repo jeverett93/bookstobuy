@@ -1,11 +1,13 @@
 import React from "react";
 
+// inline styling for jumbotron on top of page
 const styles = {
     backgroundColor: "white",
     color: "#007bff",
     fontStyle: "italic"
 };
 
+// jumbotron
 function Jumbotron() {
     return (
         <div className="jumbotron text-center" style={styles}>
@@ -15,4 +17,5 @@ function Jumbotron() {
     );
 }
 
+// exporting component to be used in other parts of application
 export default Jumbotron;

@@ -1,5 +1,6 @@
 import React from "react";
 
+// inline styling
 const styles = {
     border: "none",
     input: {
@@ -8,6 +9,7 @@ const styles = {
     }
 };
 
+// component for search bar and button
 function Textbox(props) {
     return (
         <div className="card" style={styles}>
@@ -30,4 +32,5 @@ function Textbox(props) {
     );
 }
 
+// exporting component to be used in other parts of application
 export default Textbox;

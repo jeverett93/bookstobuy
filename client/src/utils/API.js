@@ -1,5 +1,6 @@
 import axios from "axios";
 
+// API calls for CRUD methods
 export default {
     search: function (query) {
         return axios.get("/api/google/" + query);

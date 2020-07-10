@@ -5,10 +5,9 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 
-// Define middleware here
+// Defining middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {

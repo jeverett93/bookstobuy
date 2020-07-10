@@ -1,5 +1,6 @@
 import React from "react";
 
+// navigation bar component
 function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -16,4 +17,5 @@ function Navbar() {
     );
 }
 
+// exporting component to be used in other parts of application
 export default Navbar;

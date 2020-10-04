@@ -23,6 +23,8 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
+const MONGODB_URI = 'mongodb+srv://jeverett93:January1993@booksdb.qivpf.mongodb.net/<dbname>?retryWrites=true&w=majority'
+
 // Connect to the Mongo DB
 mongoose
     .connect(process.env.MONGODB_URI || "mongodb://localhost/bookstobuy")
